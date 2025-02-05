@@ -1,101 +1,57 @@
-import Image from "next/image";
+import Categories from "@/components/Categories";
+import Hero from "@/components/Hero";
+import { Button } from "@/components/ui/button";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    <>
+      <main>
+        <Hero />
+        <section className="pt-28 pb-40 container">
+          <Categories />
+        </section>
+        <section className="container flex flex-col gap-12">
+          <div className="flex items-center justify-around py-8 px-24 bg-d8 overflow-hidden rounded-xl
+                bg-[url('/assets/home/desktop/pattern-circles.svg')] bg-no-repeat bg-left ">
+            <div className="w-1/3 translate-y-[8%]">
+              <img loading="lazy" src="./assets/home/desktop/image-speaker-zx9.png" alt="speaker" className="w-full h-full object-cover" />
+            </div>
+            <div className="w-1/3">
+              <h2 className="text-white h1">ZX9 SPEAKER</h2>
+              <p className="body text-white text-opacity-75 mt-6 mt-32">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+              <Button className=" w-fit bg-black hover:bg-[#4C4C4C] py-6 px-8 mt-10 rounded-none subtitle">
+                See Product
+              </Button>
+            </div>
+          </div>
+          <div className="bg-[url('/assets/home/desktop/image-speaker-zx7.jpg')]  px-24 py-28 bg-no-repeat bg-cover bg-center rounded-xl">
+            <h2 className="h4 ">ZX7 SPEAKER</h2>
+            <Button className=" w-fit bg-black hover:bg-[#4C4C4C] py-6 px-8 mt-10 rounded-none subtitle">
+              See Product
+            </Button>
+          </div>
+          <div className="flex items-stretch gap-8">
+            <img loading="lazy" src="./assets/home/desktop/image-earphones-yx1.jpg" alt="earphone" className="w-1/2 h-full object- rounded-xl" />
+            <div className="bg-f1 p-24 w-1/2 flex justify-center flex-col gap-10 rounded-xl">
+              <h2 className="h4 ">YX1 EARPHONES</h2>
+              <Button className=" w-fit bg-black hover:bg-[#4C4C4C] py-6 px-8  rounded-none subtitle ">
+                See Product
+              </Button>
+            </div>
+          </div>
+        </section>
+        <section className="container flex items-center justify-between gap-32 py-52">
+          <div className="w-1/2">
+            <h2 className="h2 uppercase">Bringing you the <span className="text-d8">best</span> audio gear</h2>
+            <p className="body text-black text-opacity-50 mt-8">Located at the heart of New York City,
+              Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories.
+              We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products.
+              Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.</p>
+          </div>
+          <img loading="lazy" src="./assets/shared/desktop/image-best-gear.jpg" alt="" className="w-1/2 h-full object-cover" />
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
