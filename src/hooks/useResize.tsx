@@ -4,7 +4,7 @@ export const useResize = (callback: (...args: unknown[]) => void, ...args: unkno
         const handleCallBack = () => {
             callback(...args)
         }
-        window.addEventListener("resize", () => handleCallBack)
-        return () => window.removeEventListener("resize", () => handleCallBack)
+        window.addEventListener("resize", handleCallBack)
+        return () => window.removeEventListener("resize", handleCallBack)
     }, [])
 }
