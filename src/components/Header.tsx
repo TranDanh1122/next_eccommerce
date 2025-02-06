@@ -32,17 +32,17 @@ const Header = React.memo((): React.JSX.Element => {
                     WebkitMask: "url(/assets/shared/tablet/icon-hamburger.svg) center / cover no-repeat",
                 }}></i>
                 <Link href={"/"}>
-                    <Image priority objectFit="cover" src="./assets/shared/desktop/logo.svg" alt="logo" className="py-10" width={143} height={25} />
+                    <Image priority objectFit="cover" src="/assets/shared/desktop/logo.svg" alt="logo" className="py-10" width={143} height={25} />
                 </Link>
                 <ul className="text-[13px] hidden lg:flex leading-loose tracking-[2px] font-bold uppercase text-white items-center justify-start gap-9">
-                    <li ><Link href={"/"} >Home</Link></li>
-                    <li ><Link href={"/"} >HEADPHONES</Link></li>
-                    <li ><Link href={"/"} >SPEAKERS</Link></li>
-                    <li ><Link href={"/"} >EARPHONES</Link></li>
+                    <li className="hover:text-d8"><Link href={"/"} >Home</Link></li>
+                    <li className="hover:text-d8"><Link href={"/"} >HEADPHONES</Link></li>
+                    <li className="hover:text-d8"><Link href={"/"} >SPEAKERS</Link></li>
+                    <li className="hover:text-d8"><Link href={"/"} >EARPHONES</Link></li>
                 </ul>
                 <i className="w-6 h-5 block bg-white" style={{
-                    mask: "url(./assets/shared/desktop/icon-cart.svg) center / cover no-repeat",
-                    WebkitMask: "url(./assets/shared/desktop/icon-cart.svg) center / cover no-repeat",
+                    mask: "url(/assets/shared/desktop/icon-cart.svg) center / cover no-repeat",
+                    WebkitMask: "url(/assets/shared/desktop/icon-cart.svg) center / cover no-repeat",
                 }}>
                 </i>
                 {open && <div className="h-fit absolute w-full top-full left-0 z-20 bg-white md:px-10 px-4 md:py-16 py-4 ">

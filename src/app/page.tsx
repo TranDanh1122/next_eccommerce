@@ -1,5 +1,6 @@
 'use client'
 import Categories from "@/components/Categories";
+import FooterInfo from "@/components/FooterInfo";
 import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import React from "react";
@@ -10,13 +11,13 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <section className="pt-28 pb-40 container px-4">
+        <section className="pt-28 pb-40 container px-4 md:px-0">
           <Categories />
         </section>
         <section className="container flex flex-col gap-12 overflow-hidden px-4">
           <div className="flex items-center lg:justify-around gap-16 lg:gap-0 lg:flex-row 
                 flex-col lg:py-8 py-16 md:px-24 px-8 bg-d8 overflow-hidden rounded-xl
-                bg-[url('/assets/home/desktop/pattern-circles.svg')] bg-no-repeat bg-left ">
+                bg-[url('/assets/home/desktop/pattern-circles.svg')] bg-no-repeat lg:bg-left bg-center">
             <div className="md:w-1/3 w-4/5 lg:translate-y-[8%] translate-x-0 ">
               <picture>
                 <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx9.png" />
@@ -56,20 +57,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="container flex items-center justify-between lg:gap-32 gap-16 py-52 lg:flex-row flex-col-reverse">
-          <div className="lg:w-1/2 w-full">
-            <h2 className="md:h2 h4 uppercase lg:text-left text-center">Bringing you the <span className="text-d8">best</span> audio gear</h2>
-            <p className="body text-black text-opacity-50 mt-8 lg:text-left text-center">Located at the heart of New York City,
-              Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories.
-              We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products.
-              Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.</p>
-          </div>
-          <picture className="lg:w-1/2 w-full">
-            <source media="(min-width: 1024px)" srcSet="/assets/shared/desktop/image-best-gear.jpg" />
-            <source media="(min-width: 768px)" srcSet="/assets/shared/tablet/image-best-gear.jpg" />
-            <img src="/assets/shared/mobile/image-best-gear.jpg" alt="YX1 EARPHONES" className="w-full lg:aspect-square md:aspect-video  aspect-square object-cover" />
-          </picture>
-        </section>
+        <FooterInfo />
       </main>
     </>
   );

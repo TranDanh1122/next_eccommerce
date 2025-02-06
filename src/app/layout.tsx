@@ -23,9 +23,9 @@ export default function RootLayout({
       <body
         className={`${manrope.variable}  antialiased`}
       >
-          <Header />
-          {children}
-          <Footer />
+        <Header />
+        {children}
+        <Footer/>
       </body>
     </html>
   );
