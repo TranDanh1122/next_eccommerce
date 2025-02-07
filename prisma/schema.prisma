@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider  = "postgresql"
+    url       = env("DATABASE_POSTGRES_PRISMA_URL")
+    directUrl = env("DATABASE_POSTGRES_URL_NON_POOLING")
+}
+
+model Category {
+    id          String   @id @default(cuid())
+    name        String
+    img_desktop String   @default("")
+    img_tablet  String   @default("")
+    img_mobile  String   @default("")
+    updated_at  DateTime @default(now())
+    created_at  DateTime @default(now())
+}
+
+model Galleries {
+    id      String @id @default(cuid())
+    type    String
+    type_id String
+    img     String
+}
+
+model Product {
+    id         String   @id @default(cuid())
+    name       String
+    updated_at DateTime @default(now())
+    created_at DateTime @default(now())
+}

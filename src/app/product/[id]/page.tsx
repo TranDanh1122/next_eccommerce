@@ -8,7 +8,7 @@ import React from "react"
 export default function ProductDetail(): React.JSX.Element {
     return <>
         <main className="container max-w-[1110px] lg:px-0 px-10">
-            <div className="pt-20 pb-14">
+            <div className="md:pt-20 md:pb-14 py-4">
                 <Link href={"/"} className="body text-black text-opacity-50 font-medium">Go Back</Link>
             </div>
             <section className="flex items-center flex-col gap-8 md:gap-0 md:flex-row justify-between">
