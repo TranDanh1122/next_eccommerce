@@ -1,7 +1,7 @@
 'use client'
 import React from "react"
 const FooterInfo = React.memo((): React.JSX.Element => {
-    return <section className="container max-w-[1110px] flex items-center justify-between lg:gap-32 gap-16 py-52 lg:flex-row flex-col-reverse">
+    return <section className="container max-w-[1110px] lg:px-0 px-10 flex items-center justify-between lg:gap-32 gap-16 py-52 lg:flex-row flex-col-reverse">
         <div className="lg:w-1/2 w-full">
             <h2 className="md:h2 h4 uppercase lg:text-left text-center">Bringing you the <span className="text-d8">best</span> audio gear</h2>
             <p className="body text-black text-opacity-50 mt-8 lg:text-left text-center">Located at the heart of New York City,

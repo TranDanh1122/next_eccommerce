@@ -7,37 +7,37 @@ import Link from "next/link"
 import React from "react"
 export default function ProductDetail(): React.JSX.Element {
     return <>
-        <main className="container max-w-[1110px]">
+        <main className="container max-w-[1110px] lg:px-0 px-10">
             <div className="pt-20 pb-14">
                 <Link href={"/"} className="body text-black text-opacity-50 font-medium">Go Back</Link>
             </div>
-            <section className="flex items-center flex-col gap-8 md:gap-0 lg:flex-row justify-between">
-                <picture className="lg:w-5/12 w-full">
-                    <source media="(min-width: 1024px)" srcSet="/assets/shared/desktop/image-xx99-mark-two-headphones.jpg" />
-                    <source media="(min-width: 768px)" srcSet="/assets/shared/mobile/image-xx99-mark-two-headphones.jpg" />
-                    <img src="/assets/shared/mobile/image-xx99-mark-two-headphones.jpg" alt="Speaker ZX9" className="w-full h-full object-cover lg:aspect-square md:aspect-video" />
+            <section className="flex items-center flex-col gap-8 md:gap-0 md:flex-row justify-between">
+                <picture className="md:w-5/12 w-full h-full">
+                    <source media="(min-width: 1024px)" srcSet="/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg" />
+                    <source media="(min-width: 768px)" srcSet="/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg" />
+                    <img src="/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg" alt="Speaker ZX9" className="w-full h-full object-cover lg:aspect-square md:aspect-auto" />
                 </picture>
-                <div className="lg:w-5/12 w-full">
-                    <span className="over block lg:text-left text-center text-d8">
+                <div className="md:w-5/12 w-full">
+                    <span className="over block md:text-left text-center text-d8">
                         NEW PRODUCT
                     </span>
-                    <h2 className="h2 mt-4 mb-8 w-1/2 lg:w-full text-center lg:text-left mx-auto"> XX99 Mark II Headphones</h2>
-                    <p className="text-black text-opacity-50 body font-medium w-4/5 lg:w-full text-center lg:text-left mx-auto">
+                    <h2 className="h2 mt-4 mb-8 w-1/2 md:w-full text-center md:text-left mx-auto"> XX99 Mark II Headphones</h2>
+                    <p className="text-black text-opacity-50 body font-medium w-4/5 md:w-full text-center md:text-left mx-auto">
                         The new XX99 Mark II headphones is the pinnacle of pristine audio.
                         It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
                     </p>
                     <span className="h6 my-10 block">$ 2,999</span>
                     <div className="flex items-stretch justify-start gap-4">
                         <Quantity />
-                        <Button className=" w-fit bg-d8 hover:bg-fb py-6 px-8 rounded-none subtitle lg:mx-0 mx-auto flex">
+                        <Button className=" w-fit bg-d8 hover:bg-fb py-6 px-8 rounded-none subtitle md:mx-0 mx-auto flex">
                             Add to card
                         </Button>
                     </div>
 
                 </div>
             </section>
-            <section className="flex items-start justify-between mt-40">
-                <div className="w-3/5">
+            <section className="flex lg:flex-row flex-col gap-32 lg:gap-0 items-start justify-between mt-40">
+                <div className="lg:w-3/5 w-full">
                     <h2 className="h3 mb-8">FEATURES</h2>
                     <p className="body text-black text-opacity-50">
                         Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening.
@@ -50,11 +50,13 @@ export default function ProductDetail(): React.JSX.Element {
                         cutting-edge technology, and a modern design aesthetic.
                     </p>
                 </div>
-                <div className="w-1/5">
-                    <h2 className="h3 mb-8">in the box</h2>
-                    <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">1x</span> Headphone Unit</p>
-                    <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">2x</span> Headphone Unit</p>
-                    <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">3x</span> Headphone Unit</p>
+                <div className="lg:w-1/5 w-full flex lg:flex-col flex-row gap-8">
+                    <h2 className="h3 lg:w-full w-1/2">in the box</h2>
+                    <div className="lg:w-full w-1/2">
+                        <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">1x</span> Headphone Unit</p>
+                        <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">2x</span> Headphone Unit</p>
+                        <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">3x</span> Headphone Unit</p>
+                    </div>
                 </div>
             </section>
             <section className="grid grid-cols-5 grid-rows-2 gap-8 mt-40 max-h-[600px]">

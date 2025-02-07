@@ -6,7 +6,7 @@ const Footer = React.memo((): React.JSX.Element => {
     return <>
 
         <footer className="bg-black ">
-            <div className="container pb-12 pt-20 md:px-0 px-8 max-w-[1110px]">
+            <div className="container pb-12 pt-20 lg:px-0 px-10 max-w-[1110px]">
                 <div className="flex flex-col justify-between gap-10">
                     <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center md:items-start lg:items-center">
                         <Link href={"/"}>

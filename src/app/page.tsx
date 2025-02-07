@@ -11,10 +11,10 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <section className="pt-28 pb-40 container max-w-[1110px] px-4 md:px-0">
+        <section className="pt-28 pb-40 container max-w-[1110px] lg:px-0 px-10">
           <Categories />
         </section>
-        <section className="container max-w-[1110px] flex flex-col gap-12 overflow-hidden px-4">
+        <section className="container max-w-[1110px] flex flex-col gap-12 overflow-hidden lg:px-0 px-10">
           <div className="flex items-center lg:justify-around gap-16 lg:gap-0 lg:flex-row 
                 flex-col lg:py-8 py-16 md:px-24 px-8 bg-d8 overflow-hidden rounded-xl
                 bg-[url('/assets/home/desktop/pattern-circles.svg')] bg-no-repeat lg:bg-left bg-center">

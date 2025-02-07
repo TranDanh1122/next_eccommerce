@@ -26,7 +26,7 @@ const Header = React.memo((): React.JSX.Element => {
     })
     return <>
         <header ref={header} className="bg-black relative z-10">
-            <nav className="container flex justify-between items-center border-b-[1px] border-solid border-white/20 md:px-0 px-4 max-w-[1110px]">
+            <nav className="container flex justify-between items-center border-b-[1px] border-solid border-white/20 lg:px-0 max-w-[1110px] px-10">
                 <i onClick={() => toogle(!open)} className="block lg:hidden w-4 h-4 bg-white" style={{
                     mask: "url(/assets/shared/tablet/icon-hamburger.svg) center / cover no-repeat",
                     WebkitMask: "url(/assets/shared/tablet/icon-hamburger.svg) center / cover no-repeat",
