@@ -5,35 +5,51 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider  = "postgresql"
-    url       = env("DATABASE_POSTGRES_PRISMA_URL")
-    directUrl = env("DATABASE_POSTGRES_URL_NON_POOLING")
+  provider  = "postgresql"
+  url       = env("DB_POSTGRES_PRISMA_URL")
+  directUrl = env("DB_POSTGRES_URL_NON_POOLING")
 }
 
 model Category {
-    id          String   @id @default(cuid())
-    name        String
-    img_desktop String   @default("")
-    img_tablet  String   @default("")
-    img_mobile  String   @default("")
-    updated_at  DateTime @default(now())
-    created_at  DateTime @default(now())
+  id          String   @id @default(cuid())
+  name        String
+  img_desktop String   @default("")
+  img_tablet  String   @default("")
+  img_mobile  String   @default("")
+  updated_at  DateTime @default(now())
+  created_at  DateTime @default(now())
 }
 
 model Galleries {
-    id      String @id @default(cuid())
-    type    String
-    type_id String
-    img     String
+  id      String @id @default(cuid())
+  type    String
+  type_id String
+  img     String
+}
+
+model Includes {
+  id        String   @id @default(cuid())
+  quantity  Int
+  item      String
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId String?
 }
 
 model Product {
-    id         String   @id @default(cuid())
-    name       String
-    updated_at DateTime @default(now())
-    created_at DateTime @default(now())
+  id          String     @id @default(cuid())
+  name        String
+  img_desktop String     @default("")
+  img_tablet  String     @default("")
+  img_mobile  String     @default("")
+  isNew       Boolean
+  price       Float
+  description String
+  features    String
+  includes    Includes[]
+  updated_at  DateTime   @default(now())
+  created_at  DateTime   @default(now())
 }
