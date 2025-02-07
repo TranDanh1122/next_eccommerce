@@ -18,11 +18,11 @@ export default function ProductDetail(): React.JSX.Element {
                     <img src="/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg" alt="Speaker ZX9" className="w-full h-full object-cover lg:aspect-square md:aspect-auto" />
                 </picture>
                 <div className="md:w-5/12 w-full">
-                    <span className="over block md:text-left text-center text-d8">
+                    <span className="over block text-d8">
                         NEW PRODUCT
                     </span>
-                    <h2 className="h2 mt-4 mb-8 w-1/2 md:w-full text-center md:text-left mx-auto"> XX99 Mark II Headphones</h2>
-                    <p className="text-black text-opacity-50 body font-medium w-4/5 md:w-full text-center md:text-left mx-auto">
+                    <h2 className="h2 mt-4 mb-8 w-full mx-auto"> XX99 Mark II Headphones</h2>
+                    <p className="text-black text-opacity-50 body font-medium w-full mx-auto">
                         The new XX99 Mark II headphones is the pinnacle of pristine audio.
                         It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
                     </p>
@@ -36,7 +36,7 @@ export default function ProductDetail(): React.JSX.Element {
 
                 </div>
             </section>
-            <section className="flex lg:flex-row flex-col gap-32 lg:gap-0 items-start justify-between mt-40">
+            <section className="flex lg:flex-row flex-col gap-24 md:gap-32 lg:gap-0 items-start justify-between md:mt-40 mt-24">
                 <div className="lg:w-3/5 w-full">
                     <h2 className="h3 mb-8">FEATURES</h2>
                     <p className="body text-black text-opacity-50">
@@ -50,16 +50,16 @@ export default function ProductDetail(): React.JSX.Element {
                         cutting-edge technology, and a modern design aesthetic.
                     </p>
                 </div>
-                <div className="lg:w-1/5 w-full flex lg:flex-col flex-row gap-8">
-                    <h2 className="h3 lg:w-full w-1/2">in the box</h2>
-                    <div className="lg:w-full w-1/2">
+                <div className="lg:w-1/5 w-full flex lg:flex-col md:flex-row flex-col gap-8">
+                    <h2 className="h3 lg:w-full md:w-1/2 w-full">in the box</h2>
+                    <div className="lg:w-full md:w-1/2 w-full">
                         <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">1x</span> Headphone Unit</p>
                         <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">2x</span> Headphone Unit</p>
                         <p className="body font-medium text-black text-opacity-50 flex items-center justify-start"><span className="text-d8 w-1/5">3x</span> Headphone Unit</p>
                     </div>
                 </div>
             </section>
-            <section className="grid grid-cols-5 grid-rows-2 gap-8 mt-40 max-h-[600px]">
+            <section className="grid md:grid-cols-5 md:grid-rows-2 grid-rows-4 grid-cols-1 md:gap-8 gap-0 md:gap-y-0 gap-y-8 md:mt-40 mt-24  md:max-h-[600px] max-h-[800px]">
                 <div className="row-span-2 grid grid-cols-1 col-span-2 grid-rows-2 gap-8">
                     <picture className="w-full overflow-hidden rounded-xl">
                         <source media="(min-width: 1024px)" srcSet="/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg" />
