@@ -6,7 +6,7 @@ const Hero = React.memo((): React.JSX.Element => {
 
     return <>
         <section className="lg:bg-[rgb(13,13,13)] lg:p-0 pt-32 pb-44 relative overflow-hidden">
-            <div className="container flex items-center justify-between">
+            <div className="container max-w-[1110px] flex items-center justify-between">
                 <div className="lg:w-1/3 md:w-2/3 w-4/5 mx-auto flex flex-col gap-6">
                     <span className="over text-white/50 lg:text-left text-center">
                         NEW PRODUCT
@@ -33,4 +33,6 @@ const Hero = React.memo((): React.JSX.Element => {
     </>
 })
 Hero.displayName = "Hero"
+Hero.whyDidYouRender = true;
+
 export default Hero

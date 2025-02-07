@@ -11,16 +11,18 @@ export default function CategoryDetail() {
             <div className="py-28 bg-black">
                 <h1 className="text-white h2 text-center">HEADPHONES</h1>
             </div>
-            <section className="container flex flex-col gap-40 py-40">
+            <section className="container max-w-[1110px] flex flex-col gap-40 py-40">
                 <ProductItem isNew={true} />
                 <ProductItem isNew={false} type="reverse" />
                 <ProductItem isNew={false} />
 
             </section>
-            <section className="container">
+            <section className="container max-w-[1110px]">
                 <Categories />
             </section>
             <FooterInfo />
         </main>
     </>
 }
+CategoryDetail.whyDidYouRender = true;
+

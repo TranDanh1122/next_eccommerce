@@ -41,4 +41,6 @@ const Categories = React.memo((): React.JSX.Element => {
     </>
 })
 Categories.displayName = "Category"
+Categories.whyDidYouRender = true;
+
 export default Categories
